@@ -7,8 +7,8 @@ from datetime import datetime
 # Create your views here.
 def index(request):
 	post_list=Article.objects.all()
-	return render (request,'index.html', {post_list:post_list})
-	return render(request, 'index.html')
+	return render(request,'index.html', {'post_list':post_list})
+	#return render(request, 'index.html')
 def list(request):
 	names=[]
 	return render(request,'list.html',{'names':names})
