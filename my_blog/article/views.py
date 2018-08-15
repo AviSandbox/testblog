@@ -33,11 +33,12 @@ def test(request):
 
 class RSSFeed(Feed):
 	title="RSS feed-article"
-	link="feeds/posts/"
+	link="feeds/posts"
 	description="RSS feed -blog posts"
 
 	def items(self):
 		return Article.objects.order_by('-date_time')
+		
 
 	def item_title(self,item):
 		return item.title
